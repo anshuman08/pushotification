@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Virtual Splat Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-logo></app-logo>
+  <h1 style="margin-left: 20px;">Sign In</h1>
+<form>
+<ion-list>
+<ion-item>
+<ion-label position="stacked" style="margin-bottom: 8px;">Username</ion-label>
+<ion-input autocomplete="off" type="text" [(ngModel)]="postData.username" name="username"></ion-input>
+</ion-item>
+
+<ion-item>
+<ion-label position="stacked" style="margin-bottom: 8px;">Password</ion-label>
+<ion-input autocomplete="off" type="password" [(ngModel)]="postData.password" name="password"></ion-input>
+</ion-item>
+
+<ion-item lines='none'>Dont have a account yet?
+<a routerLink='/signup'> Create Account</a>
+</ion-item>
+</ion-list>
+<ion-button expand="block" share="round" color="success" (click)="loginAction()">Login</ion-button>
+
+<ion-item lines='none'>
+  <a routerLink='/forgot'>Forgot Password?</a>
+  </ion-item>
+
+</form>
+</ion-content>

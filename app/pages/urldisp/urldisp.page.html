@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Url Display Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div style="text-align: center; margin-top: 20px;">
+    <b>URL fetched from server:</b><br>
+<ion-label  >{{urll}}</ion-label>
+</div>
+<br />
+<ion-button (click)="subscribeTo()">Token Gen</ion-button>
+<ion-button color="danger" (click)="unsubscribeFrom()">
+  Token Remove
+</ion-button>
+<ion-button color="warning" (click)="getToken()">Get token</ion-button>
+{{ remoteToken }}
+
+<br />
+Notifications:
+<br />
+{{ notifications | json }}
+
+</ion-content>
